@@ -1,9 +1,13 @@
+-- Criar tabela alunos
+
 CREATE TABLE Alunos (
     aluno_id INT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100),
     email VARCHAR(100),
     telefone VARCHAR(20)
 );
+
+-- Criar tabela agendamento
 
 CREATE TABLE Agendamento (
     agendamento_id INT AUTO_INCREMENT PRIMARY KEY,
@@ -26,13 +30,13 @@ select * from alunos
 INSERT INTO Alunos (nome, email, telefone) 
             VALUES  
             ('Carolina', null , null),
-            ('Camila Félix'),
+            ('Camila Félix' null , null),
             ('Cida', null , null),
             ('Eva', null , null),
             ('Fabi', null , null),
-    		    ('Helena', null , null),
-    		    ('Izabelli', null , null),
-    		    ('Karina', null , null),
+    		('Helena', null , null),
+    		('Izabelli', null , null),
+    		('Karina', null , null),
             ('Luciana', null , null),
             ('Michele', null , null),
             ('Miki', null , null),
