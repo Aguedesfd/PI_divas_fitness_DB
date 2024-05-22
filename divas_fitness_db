@@ -1,0 +1,46 @@
+CREATE TABLE Alunos (
+    aluno_id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100),
+    email VARCHAR(100),
+    telefone VARCHAR(20)
+);
+
+CREATE TABLE Agendamento (
+    agendamento_id INT AUTO_INCREMENT PRIMARY KEY,
+    aluno_id INT,
+    data_hora DATETIME,
+    duracao_minutos INT,
+    FOREIGN KEY (aluno_id) REFERENCES Alunos(aluno_id)
+);
+
+-- Inserir um aluno
+INSERT INTO Alunos (nome, email, telefone) VALUES ('Nome do Aluno', 'email@example.com', '123456789');
+
+-- Agendar uma sessão para o aluno
+INSERT INTO Agendamento (aluno_id, data_hora, duracao_minutos) VALUES (1, '2024-05-13 09:00:00', 60);
+
+select * from alunos
+
+-- Dados dos alunos
+
+INSERT INTO Alunos (nome, email, telefone) 
+            VALUES  
+            ('Carolina', null , null),
+            ('Camila Félix'),
+            ('Cida', null , null),
+            ('Eva', null , null),
+            ('Fabi', null , null),
+    		    ('Helena', null , null),
+    		    ('Izabelli', null , null),
+    		    ('Karina', null , null),
+            ('Luciana', null , null),
+            ('Michele', null , null),
+            ('Miki', null , null),
+            ('Milena', null , null),
+            ('Mira', null , null),
+            ('Miriam', null , null),
+            ('Nil', null , null),
+            ('Patrícia', null , null),
+            ('Simone', null , null),
+            ('Vanessa', null , null),
+            ('Vanessa André', null , null);
